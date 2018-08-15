@@ -67,5 +67,17 @@ public class GameStore {
             em.persist(newCell);
         }
     }
+    public Optional<Game> getOpenGameFor(User user) {
+        return em.createQuery(
+                "select g " +
+                        "from Game g " +
+                        "where g.status <> :status " +
+                        "  and (g.player1 = :user " +
+                        "   or g.player2 = :user)", Game.class)
+                .setParameter("status", GameStatus.FINISHED)
+                .setParameter("user", user)
+                .getResultStream()
+                .findFirst();
+    }
 
 }
