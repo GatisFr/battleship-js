@@ -45,7 +45,7 @@
     </table>
 </div>
 <div id="select-fire" class="w3-hide">
-    <button type="button" onclick="fire()">Fire!</button>
+    <button type="button" ">Fire!</button>
 </div>
     <script>
         function checkStatus() {
