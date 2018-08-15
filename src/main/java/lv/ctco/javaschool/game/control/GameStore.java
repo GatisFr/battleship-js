@@ -1,6 +1,6 @@
 package lv.ctco.javaschool.game.control;
 
-import com.sun.tools.javac.util.List;
+//import com.sun.tools.javac.util.List;
 import lv.ctco.javaschool.auth.entity.domain.User;
 import lv.ctco.javaschool.game.entity.Cell;
 import lv.ctco.javaschool.game.entity.CellState;
