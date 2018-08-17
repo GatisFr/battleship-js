@@ -12,13 +12,17 @@ public class Game {
     @GeneratedValue
     private Long id;
 
+
     @ManyToOne
     private User player1;
     private boolean player1Active;
+    public Long player1Counter;
 
     @ManyToOne
     private User player2;
     private boolean player2Active;
+    public Long player2Counter;
+
 
     @Enumerated(EnumType.STRING)
     private GameStatus status;
@@ -51,4 +55,6 @@ public class Game {
             throw new IllegalArgumentException();
         }
     }
+
+
 }
